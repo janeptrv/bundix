@@ -104,6 +104,7 @@ class Bundix
           next unless spec.platform =~ platform
         end
 
+        warn "ASASDASDADASd #{spec} #{path}"
         hash = nix_prefetch_url(path)[SHA256_32]
         return format_hash(hash), platform if hash
       end
